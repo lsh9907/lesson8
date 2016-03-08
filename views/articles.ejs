@@ -1,0 +1,17 @@
+<%- include partials/header %>
+<body>
+<h1><%= title %></h1>
+<p>Welcome to <%= title %></p>
+<a href="articles/add" title="Add Article">Add a new Article</a>
+<ul class="list-group">
+    <% for (var i = 0; i < articles.length; i++) { %>
+    <li class="list-group-item">
+        <!--link to /articles/:id-->
+        <a href="articles/<%= articles[i]._id %>" title="Read More">
+            <%= articles[i].title %>
+        </a>
+    </li>
+    <% } %>
+</ul>
+</body>
+</html>
